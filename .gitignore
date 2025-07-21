@@ -1,0 +1,39 @@
+# Ambiente virtual
+.venv/
+
+# Banco de dados SQLite
+db.sqlite3
+
+# Arquivos gerados pelo Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários do sistema
+*.swp
+*.swo
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Configurações do Poetry
+poetry.lock
+
+# Arquivos de cache do pytest
+.pytest_cache/
+.cache/
+
+# Diretórios de testes e build
+dist/
+build/
+
+# Arquivos de cobertura de testes
+.coverage
+htmlcov/
+coverage.xml
+
+# VS Code
+.vscode/
