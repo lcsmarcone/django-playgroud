@@ -1,0 +1,93 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #93b3d4, #aeccec);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+/* Container principal */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Título da seção */
+main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222;
+    font-size: 2em;
+}
+
+/* Lista de carros */
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Card de carro */
+li {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+li h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #719bc7;
+}
+
+li p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    background: #f0f0f0;
+    color: #555;
+    font-size: 0.9em;
+    border-top: 1px solid #ddd;
+}
+
+.car-photo {
+    display: block;
+    margin: 20px auto; /* Centraliza horizontalmente */
+}

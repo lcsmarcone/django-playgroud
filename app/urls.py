@@ -18,8 +18,11 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
+from cars.views import cars_urls	
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('cars/', cars_urls),  # Assuming you want to include a simple view for cars
 ] + static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
