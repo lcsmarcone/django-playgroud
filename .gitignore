@@ -2,7 +2,7 @@
 .venv/
 
 # Banco de dados SQLite
-db.sqlite3
+# db.sqlite3
 
 # Arquivos gerados pelo Python
 __pycache__/

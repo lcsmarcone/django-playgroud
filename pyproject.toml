@@ -1,19 +1,15 @@
-[project]
+[tool.poetry]
 name = "django-playgroud"
 version = "0.1.0"
-description = ""
-authors = [
-    {name = "lcsmarcone",email = "lcsmarcone@gmail.com"}
-]
+description = "Ambiente de teste para Django com Poetry"
+authors = ["lcsmarcone <lcsmarcone@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-    "django (>=5.2.4,<6.0.0)"
-]
+packages = [{ include = "django_playgroud", from = "src" }]
 
-[tool.poetry]
-packages = [{include = "django_playgroud", from = "src"}]
-
+[tool.poetry.dependencies]
+python = ">=3.13"
+django = ">=5.2.4,<6.0.0"
+pillow = "^11.3.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
