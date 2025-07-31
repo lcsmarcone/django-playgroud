@@ -12,5 +12,8 @@ from .models import Car
 
 
 def cars_urls(request):
-    cars = Car.objects.all()  # Busca todos os carros no banco
+    search_query = request.GET.get('search', '')
+    # cars = Car.objects.all()  # Busca todos os carros no banco
+    cars = Car.objects.filter(model__icontains=search_query).order_by('model')  # Busca carros filtrados pelo modelo
+    # cars = Car.objects.filter(model__contains='chevette')  # Busca todos os carros no banco
     return render(request, 'cars_list.html', {'cars': cars})
