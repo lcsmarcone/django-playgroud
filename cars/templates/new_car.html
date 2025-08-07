@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Add a New Car{% endblock %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/new_car.css' %}">
+{% endblock %}
+
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" required>
+
+        <label for="brand">Brand:</label>
+        <select id="brand" name="brand" required>
+            {% for brand in brands %}
+                <option value="{{ brand.id }}">{{ brand.name }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="factory_year">Factory Year:</label>
+        <input type="number" id="factory_year" name="factory_year" required>
+
+        <label for="model_year">Model Year:</label>
+        <input type="number" id="model_year" name="model_year" required>
+
+        <label for="plate">Plate:</label>
+        <input type="text" id="plate" name="plate">
+
+        <label for="value">Value:</label>
+        <input type="number" id="value" name="value" step="0.01" required>
+
+        <label for="photo">Photo:</label>
+        <input type="file" id="photo" name="photo">
+
+        <button type="submit">Add Car</button>
+    </form>
+{% endblock %}
